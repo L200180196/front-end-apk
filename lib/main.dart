@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:latihan1/cubit/user_cubit.dart';
 
 import 'package:latihan1/models/models.dart';
 
@@ -15,16 +17,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Splash2(),
-
-      theme: ThemeData(
-          textTheme: TextTheme(
-              title: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14))),
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (_) => UserCubit())],
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Splash2(),
+        theme: ThemeData(
+            textTheme: TextTheme(
+                title: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14))),
+      ),
     );
   }
 }
@@ -50,7 +54,7 @@ class Splash2 extends StatelessWidget {
             // height: MediaQuery.of(context).size.height * 0.7,
             child: SplashScreen(
               seconds: 6,
-              navigateAfterSeconds: new MainPage(),
+              navigateAfterSeconds: new SignInPage(),
               image: new Image.asset("assets/jogjakarir.png"),
               photoSize: orientation == Orientation.portrait ? 100.0 : 65,
               useLoader: false,
