@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:latihan1/models/models.dart';
 import 'package:latihan1/widgets/lamaran_sukses.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'cubit/cubit.dart';
 import 'pages/pages.dart';
 
 void main() {
@@ -13,15 +15,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Search(),
-      theme: ThemeData(
-          textTheme: TextTheme(
-              title: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14))),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => PerusahaanCubit()),
+        BlocProvider(create: (_) => SaveCubit()),
+        BlocProvider(create: (_) => UserCubit()),
+      ],
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MainPage(),
+        theme: ThemeData(
+            textTheme: TextTheme(
+                title: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14))),
+      ),
     );
   }
 }

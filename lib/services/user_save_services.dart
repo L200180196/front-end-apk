@@ -2,7 +2,7 @@ part of 'services.dart';
 
 class UserSaveServices {
   static Future<ApiReturnValue<List<UserSave>>> getUserSave() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(milliseconds: 5000));
 
     return ApiReturnValue(value: mockUserSave);
   }

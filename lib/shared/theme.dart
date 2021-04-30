@@ -1,5 +1,10 @@
 part of 'shared.dart';
 
+Widget loadingIndicator = SpinKitFadingCircle(
+  size: 45,
+  color: blueColors,
+);
+
 const double defaultMargin = 24;
 Color blueColors = "528FFF".toColor();
 Color blueColors2 = "75A6FF".toColor();
