@@ -40,8 +40,13 @@ class Save extends StatelessWidget {
                           Container(
                             width: 42,
                             height: 42,
-                            margin: EdgeInsets.only(bottom: 4),
+                            margin: EdgeInsets.only(bottom: 4, right: 5),
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: "F2F2F2".toColor(),
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4)),
                               image: DecorationImage(
                                   image: AssetImage(save.perusahaan.gambar),
                                   fit: BoxFit.cover),
