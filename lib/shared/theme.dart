@@ -7,6 +7,10 @@ Color greyColor = "4F4F4F".toColor();
 Color greyColor2 = "828282".toColor();
 Color greyColor3 = "A5B2C2".toColor();
 Color greyColor4 = "B9C5D4".toColor();
+Widget loadingIndicator = SpinKitFadingCircle(
+  size: 40,
+  color: Colors.blue,
+);
 
 TextStyle greyFontStyle = GoogleFonts.inter().copyWith(color: greyColor);
 TextStyle blackFontStyle = GoogleFonts.inter()
