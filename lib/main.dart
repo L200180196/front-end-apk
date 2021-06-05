@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       providers: [BlocProvider(create: (_) => UserCubit())],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SignInPage(),
+        home: GantiPassword2(),
         theme: ThemeData(
             textTheme: TextTheme(
                 title: TextStyle(
