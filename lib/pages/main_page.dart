@@ -75,6 +75,7 @@ class _MainPageState extends State<MainPage> {
             },
             children: [
               HomePage(),
+              // IllustrationPage(),
               BookmarkPage(),
               ProfilePage(),
             ],

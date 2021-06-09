@@ -56,6 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: GestureDetector(
         onTap: () {
           setState(() {
@@ -81,7 +82,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: Container(
                         height: MediaQuery.of(context).size.height * 0.35,
                         width: double.infinity,
-                        color: blueColors,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [blueColors, blueColors2],
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter)),
                       ),
                     ),
                   ),

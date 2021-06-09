@@ -17,6 +17,8 @@ class _SignInPageState extends State<SignInPage> {
     });
   }
 
+  bool isLoading = false;
+
   bool notif = false;
   String validatepass(value) {
     if (value.isEmpty) {
@@ -168,57 +170,59 @@ class _SignInPageState extends State<SignInPage> {
                       height: 40,
                       margin: EdgeInsets.only(top: 16),
                       child: Container(
-                        child: RaisedButton(
-                            onPressed: () {
-                              if (formkey.currentState.validate() &&
-                                  emailController.text == email &&
-                                  passwordController.text == pass) {
-                                print("Validate");
-                                Get.to(MainPage);
-                              } else if (emailController.text != email ||
-                                  passwordController.text != pass) {
-                                setState(() {
-                                  notif = !notif;
-                                });
-                                Get.to(MainPage());
-                                // Get.snackbar(
-                                //   "Gagal",
-                                //   "Email atau password tidak cocok",
-                                //   backgroundColor: "D9435E".toColor(),
-                                // );
-                              } else if (lengthpass < 8) {
-                                Get.snackbar(
-                                  "Gagal",
-                                  "Password kurang dari 8 karakter",
-                                  backgroundColor: "D9435E".toColor(),
-                                );
-                              } else {
-                                print("Not Validate");
-                              }
-                            },
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            // color: blueColors,
-                            padding: EdgeInsets.all(0),
-                            child: Ink(
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      colors: [blueColors2, blueColors],
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter),
-                                  borderRadius: BorderRadius.circular(8)),
-                              child: Container(
-                                width: double.infinity,
-                                height: 40,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'Masuk',
-                                  style: blackFontStyle3.copyWith(
-                                      color: Colors.white, fontSize: 16),
-                                ),
-                              ),
-                            )),
+                        child: isLoading
+                            ? loadingIndicator
+                            : RaisedButton(
+                                onPressed: () {
+                                  if (formkey.currentState.validate() &&
+                                      emailController.text == email &&
+                                      passwordController.text == pass) {
+                                    print("Validate");
+                                    Get.to(MainPage);
+                                  } else if (emailController.text != email ||
+                                      passwordController.text != pass) {
+                                    setState(() {
+                                      notif = !notif;
+                                    });
+                                    Get.to(MainPage());
+                                    // Get.snackbar(
+                                    //   "Gagal",
+                                    //   "Email atau password tidak cocok",
+                                    //   backgroundColor: "D9435E".toColor(),
+                                    // );
+                                  } else if (lengthpass < 8) {
+                                    Get.snackbar(
+                                      "Gagal",
+                                      "Password kurang dari 8 karakter",
+                                      backgroundColor: "D9435E".toColor(),
+                                    );
+                                  } else {
+                                    print("Not Validate");
+                                  }
+                                },
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8)),
+                                // color: blueColors,
+                                padding: EdgeInsets.all(0),
+                                child: Ink(
+                                  decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          colors: [blueColors2, blueColors],
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter),
+                                      borderRadius: BorderRadius.circular(8)),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 40,
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      'Masuk',
+                                      style: blackFontStyle3.copyWith(
+                                          color: Colors.white, fontSize: 16),
+                                    ),
+                                  ),
+                                )),
                       ),
                     ),
                     Container(

@@ -13,7 +13,7 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:smart_select/smart_select.dart';
-
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 part 'main_page.dart';
 part 'general_page.dart';
 part 'sign_in_page.dart';
@@ -30,3 +30,5 @@ part "ganti_password.dart";
 part 'cari.dart';
 part "kebijakan.dart";
 part "search.dart";
+part "riwayat_lamaranpage.dart";
+part "ganti_password2.dart";

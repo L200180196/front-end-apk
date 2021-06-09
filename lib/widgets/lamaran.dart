@@ -82,28 +82,36 @@ class _LamaranState extends State<Lamaran> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            margin: EdgeInsets.only(right: 10),
-                            padding: EdgeInsets.fromLTRB(15, 10, 130, 10),
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(width: 1, color: Colors.black),
-                                borderRadius: BorderRadius.circular(8)),
-                            child: Text(
-                              "Upload file CV kamu",
-                              style: TextStyle(color: "808D9D".toColor()),
+                          Expanded(
+                            flex: 7,
+                            child: Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 40,
+                              alignment: Alignment.centerLeft,
+                              padding: EdgeInsets.only(left: 11),
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 1, color: Colors.black),
+                                  borderRadius: BorderRadius.circular(8)),
+                              child: Text(
+                                "Upload file CV kamu",
+                                style: TextStyle(color: "808D9D".toColor()),
+                              ),
                             ),
                           ),
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 12, horizontal: 12),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: "528FFF".toColor(),
-                            ),
-                            child: Text(
-                              "Pilih File",
-                              style: TextStyle(color: Colors.white),
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 12, horizontal: 12),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: "528FFF".toColor(),
+                              ),
+                              child: Text(
+                                "Pilih File",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ),
                         ],
@@ -148,6 +156,7 @@ class _LamaranState extends State<Lamaran> {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: 60,
+              padding: EdgeInsets.fromLTRB(24, 8, 24, 8),
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -167,14 +176,18 @@ class _LamaranState extends State<Lamaran> {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
                       _openPopupBerhasil(context);
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 126),
+                      alignment: Alignment.center,
+                      height: 40,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      // padding:
+                      //     EdgeInsets.symmetric(vertical: 15, horizontal: 126),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: "75A6FF".toColor(),

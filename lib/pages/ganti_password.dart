@@ -6,6 +6,8 @@ class GantiPassword extends StatefulWidget {
 }
 
 class _GantiPasswordState extends State<GantiPassword> {
+  TextEditingController emailController = TextEditingController();
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +32,8 @@ class _GantiPasswordState extends State<GantiPassword> {
         child: ListView(
           children: [
             Text(
-              "Masukkan email yang tertaut dengan akun kamu dan kami akan kirimkan email dengan interuksi untuk mengganti password.",
-              style: blackFontStyle3,
-            ),
+                "Masukkan email yang tertaut dengan akun kamu dan kami akan kirimkan email dengan interuksi untuk mengganti password.",
+                style: blackFontStyle3.copyWith(fontWeight: FontWeight.normal)),
             Container(
                 margin: EdgeInsets.only(top: 14),
                 child: Column(
@@ -44,8 +45,15 @@ class _GantiPasswordState extends State<GantiPassword> {
                             greyFontStyle.copyWith(color: "808D9D".toColor())),
                     Form(
                       child: TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        controller: emailController,
+                        validator: MultiValidator([
+                          RequiredValidator(errorText: "Tidak boleh kosong"),
+                          EmailValidator(errorText: "Bukan merupakan email"),
+                        ]),
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(), hintText: "Password"),
+                            border: OutlineInputBorder(),
+                            hintText: "Dadang@gmail.com"),
                       ),
                     ),
                     Container(

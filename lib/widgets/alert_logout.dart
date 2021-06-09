@@ -23,32 +23,41 @@ class _AlertLogoutState extends State<AlertLogout> {
         content: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            RaisedButton(
-              onPressed: () {},
-              color: blueColors,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8))),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: blueColors,
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                ),
-                child: Text(
-                  "Tidak",
-                  style: blackFontStyle3.copyWith(
-                      fontSize: 11, color: Colors.white),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.23,
+              child: RaisedButton(
+                onPressed: () {},
+                color: blueColors,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: blueColors,
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                  ),
+                  child: Text(
+                    "Tidak",
+                    style: blackFontStyle3.copyWith(
+                        fontSize: 11, color: Colors.white),
+                  ),
                 ),
               ),
             ),
-            OutlineButton(
-              borderSide: BorderSide(width: 2, color: blueColors),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8))),
-              onPressed: () {},
-              child: Text(
-                "Ya",
-                style:
-                    blackFontStyle3.copyWith(fontSize: 11, color: blueColors),
+            SizedBox(
+              width: 10,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.23,
+              child: OutlineButton(
+                borderSide: BorderSide(width: 2, color: blueColors),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
+                onPressed: () {},
+                child: Text(
+                  "Ya",
+                  style:
+                      blackFontStyle3.copyWith(fontSize: 11, color: blueColors),
+                ),
               ),
             ),
           ],

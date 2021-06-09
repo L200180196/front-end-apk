@@ -92,6 +92,10 @@ class _RekomendasiState extends State<Rekomendasi> {
                       width: 28,
                       height: 28,
                       decoration: BoxDecoration(
+                        border: Border.all(
+                          color: "F2F2F2".toColor(),
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(4)),
                         image: DecorationImage(
                             image: AssetImage(widget.save.gambar),
                             fit: BoxFit.cover),

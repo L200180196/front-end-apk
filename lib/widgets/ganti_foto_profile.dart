@@ -39,7 +39,9 @@ class _GantiFotoProfileState extends State<GantiFotoProfile> {
                       alignment: Alignment.bottomRight,
                       icon: Icon(Icons.delete_outline_rounded,
                           color: Colors.white),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(MainPage());
+                      },
                     ),
                   ),
                   Container(

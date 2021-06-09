@@ -79,7 +79,7 @@ class _LamaranSuksesState extends State<LamaranSukses> {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -88,8 +88,11 @@ class _LamaranSuksesState extends State<LamaranSukses> {
                         Navigator.push(context, route);
                       },
                       child: Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 15, horizontal: 105),
+                        alignment: Alignment.center,
+                        height: 40,
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        // padding:
+                        //     EdgeInsets.symmetric(vertical: 15, horizontal: 105),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: "75A6FF".toColor(),
