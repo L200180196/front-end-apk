@@ -191,7 +191,7 @@ class _PerusahaanDetailPageState extends State<PerusahaanDetailPage> {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 10),
+                            margin: EdgeInsets.only(left: 10, top: 20),
                             alignment: Alignment.topLeft,
                             child: Text(
                               judul2,

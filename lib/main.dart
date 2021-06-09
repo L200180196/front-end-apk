@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainPage(),
+        home: SignInPage(),
         theme: ThemeData(
             textTheme: TextTheme(
                 title: TextStyle(

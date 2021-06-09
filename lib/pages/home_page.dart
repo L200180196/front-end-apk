@@ -46,26 +46,20 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 172,
                 width: double.infinity,
-                child: BlocBuilder<SaveCubit, SaveState>(
-                  builder: (_, state) => (state is SaveLoaded)
-                      ? ListView(
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: state.save
-                                  .map((e) => Padding(
-                                        padding: EdgeInsets.only(
-                                            left: (e == mockUserSave.first)
-                                                ? 24
-                                                : 0),
-                                        child: Rekomendasi(save: e),
-                                      ))
-                                  .toList(),
-                            ),
-                          ],
-                        )
-                      : Center(child: loadingIndicator),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: mockPerusahaan
+                          .map((e) => Padding(
+                                padding: EdgeInsets.only(
+                                    left: (e == mockPerusahaan.first) ? 24 : 0),
+                                child: Rekomendasi(save: e),
+                              ))
+                          .toList(),
+                    ),
+                  ],
                 ),
               ),
               Container(

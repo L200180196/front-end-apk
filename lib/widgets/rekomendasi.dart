@@ -1,7 +1,7 @@
 part of 'widgets.dart';
 
 class Rekomendasi extends StatefulWidget {
-  final UserSave save;
+  final Perusahaan save;
 
   Rekomendasi({this.save});
 
@@ -21,7 +21,7 @@ class _RekomendasiState extends State<Rekomendasi> {
           });
         },
         child: Container(
-          margin: EdgeInsets.only(top: 8, right: 12),
+          margin: EdgeInsets.only(top: 8, right: 24),
           width: 252,
           height: 132,
           decoration: BoxDecoration(
@@ -48,7 +48,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                     width: 200,
                     margin: EdgeInsets.only(top: 12, left: 12),
                     child: Text(
-                      widget.save.perusahaan.posisi,
+                      widget.save.posisi,
                       style: GoogleFonts.inter().copyWith(
                         fontWeight: FontWeight.w700,
                         color: selected != '1' ? Colors.white : Colors.black,
@@ -62,7 +62,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                     alignment: Alignment.bottomRight,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage(widget.save.status != 'save'
+                          image: AssetImage(widget.save != 'save'
                               ? 'assets/simpan_normal.png'
                               : 'assets/simpan.png'),
                           fit: BoxFit.cover),
@@ -93,7 +93,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                       height: 28,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage(widget.save.perusahaan.gambar),
+                            image: AssetImage(widget.save.gambar),
                             fit: BoxFit.cover),
                       ),
                     ),
@@ -103,7 +103,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            widget.save.perusahaan.nama,
+                            widget.save.nama,
                             style: GoogleFonts.inter().copyWith(
                               fontSize: 10,
                               fontWeight: FontWeight.w600,
@@ -112,7 +112,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                             ),
                           ),
                           Text(
-                            widget.save.perusahaan.alamat,
+                            widget.save.alamat,
                             style: GoogleFonts.inter().copyWith(
                               fontSize: 8,
                               fontWeight: FontWeight.w400,
@@ -128,7 +128,7 @@ class _RekomendasiState extends State<Rekomendasi> {
                         width: 50,
                         alignment: Alignment.bottomRight,
                         child: Text(
-                          widget.save.perusahaan.deadline,
+                          widget.save.deadline,
                           style: GoogleFonts.inter().copyWith(
                             fontSize: 8,
                             fontWeight: FontWeight.w400,
