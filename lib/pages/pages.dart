@@ -39,3 +39,4 @@ part "search.dart";
 part "riwayat_lamaranpage.dart";
 part "ganti_password2.dart";
 part "ganti_password4.dart";
+part "ganti_password3.dart";
