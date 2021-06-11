@@ -67,7 +67,7 @@ class _SearchState extends State<Search> {
                   items: item,
                   title: Text("Pilih Lokasi"),
                   buttonIcon: Icon(
-                    Icons.location_on_outlined,
+                    Icons.keyboard_arrow_down_rounded,
                     color: greyColor4,
                   ),
                   decoration: BoxDecoration(
@@ -116,7 +116,7 @@ class _SearchState extends State<Search> {
                   items: item1,
                   title: Text("Pilih Pendidikan"),
                   buttonIcon: Icon(
-                    Icons.school_outlined,
+                    Icons.keyboard_arrow_down_rounded,
                     color: greyColor4,
                   ),
                   decoration: BoxDecoration(
@@ -165,7 +165,7 @@ class _SearchState extends State<Search> {
                   items: item2,
                   title: Text("Pilih Tipe Pekerjaan"),
                   buttonIcon: Icon(
-                    Icons.watch_later_outlined,
+                    Icons.keyboard_arrow_down_rounded,
                     color: greyColor4,
                   ),
                   decoration: BoxDecoration(

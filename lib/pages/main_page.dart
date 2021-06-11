@@ -46,7 +46,9 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.only(right: 20.0),
                     child: selectedPage != 2
                         ? GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(Search());
+                            },
                             child: Icon(
                               Icons.search,
                               size: 26.0,

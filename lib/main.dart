@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       providers: [BlocProvider(create: (_) => UserCubit())],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Search(),
+        home: SignInPage(),
         theme: ThemeData(
             textTheme: TextTheme(
                 title: TextStyle(
