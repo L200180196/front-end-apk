@@ -11,7 +11,6 @@ class PerusahaanCubit extends Cubit<PerusahaanState> {
   Future<void> getPerusahaan() async {
     ApiReturnValue<List<Perusahaan>> result =
         await PerusahaanServices.getPerusahaan();
-
     if (result.value != null) {
       emit(PerusahaanLoaded(result.value));
     } else {

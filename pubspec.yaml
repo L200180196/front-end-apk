@@ -33,6 +33,9 @@ dependencies:
   multi_select_flutter: ^4.0.0
   share: ^0.6.5+4
   smart_select: ^4.3.2
+<<<<<<< HEAD
+  flutter_spinkit: ^4.1.2+1
+=======
   snapping_sheet: ^3.0.0+2
   splashscreen: ^1.3.5
 flutter_native_splash:
@@ -40,6 +43,7 @@ flutter_native_splash:
   image: assets/jogjakarir.png
   android: true
   ios: true
+>>>>>>> 9af8c21187975379383d8827c3fa6e1ba7b9f3de
 
 dev_dependencies:
   flutter_test:

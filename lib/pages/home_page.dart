@@ -51,10 +51,10 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.max,
-                      children: mockUserSave
+                      children: mockPerusahaan
                           .map((e) => Padding(
                                 padding: EdgeInsets.only(
-                                    left: (e == mockUserSave.first) ? 24 : 0),
+                                    left: (e == mockPerusahaan.first) ? 24 : 0),
                                 child: Rekomendasi(save: e),
                               ))
                           .toList(),

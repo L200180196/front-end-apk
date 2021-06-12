@@ -1,6 +1,6 @@
-# latihan1
+# Jogja Karir APK
 
-A new Flutter project.
+link figma UI -> https://www.figma.com/file/y6J5ubzMs31J6pDI5yz2ch/app-jogjakarir
 
 ## Getting Started
 
