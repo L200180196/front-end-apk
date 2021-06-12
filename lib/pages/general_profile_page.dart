@@ -1,6 +1,6 @@
 part of "pages.dart";
 
-class GenProfilePage extends StatelessWidget {
+class GenProfilePage extends StatefulWidget {
   final String title;
   final Widget child;
   final String str;
@@ -17,6 +17,23 @@ class GenProfilePage extends StatelessWidget {
       this.tampil});
 
   @override
+  _GenProfilePageState createState() => _GenProfilePageState();
+}
+
+class _GenProfilePageState extends State<GenProfilePage> {
+  @override
+  void _onButtonPressed() {
+    showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(15), topRight: Radius.circular(15))),
+        backgroundColor: Colors.white,
+        context: context,
+        builder: (context) {
+          return GantiFotoProfile();
+        });
+  }
+
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
     double deviceHeight = MediaQuery.of(context).size.height;
@@ -56,7 +73,7 @@ class GenProfilePage extends StatelessWidget {
                         ? MediaQuery.of(context).size.height * 0.03
                         : 20,
                     child: Text(
-                      title,
+                      widget.title,
                       style: blackFontStyle.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     )),
@@ -88,13 +105,14 @@ class GenProfilePage extends StatelessWidget {
                                     shape: BoxShape.rectangle,
                                     borderRadius: BorderRadius.circular(4),
                                     image: DecorationImage(
-                                      image: AssetImage(
-                                          photo != null ? photo : photodefault),
+                                      image: AssetImage(widget.photo != null
+                                          ? widget.photo
+                                          : widget.photodefault),
                                       // fit: BoxFit.contain
                                     )),
                               ),
                             ),
-                            str != null
+                            widget.str != null
                                 ? Positioned(
                                     bottom: -5,
                                     right: -5,
@@ -115,9 +133,7 @@ class GenProfilePage extends StatelessWidget {
                                         alignment: Alignment.bottomRight,
                                         icon: Icon(Icons.camera_alt_rounded,
                                             color: Colors.white),
-                                        onPressed: () {
-                                          Get.to(AlertLogout());
-                                        },
+                                        onPressed: () => _onButtonPressed(),
                                       ),
                                     ),
                                   )
@@ -131,7 +147,7 @@ class GenProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          child ?? Container(),
+          widget.child ?? ListView(),
         ],
       ),
     );
