@@ -43,3 +43,4 @@ part "riwayat_lamaranpage.dart";
 part "ganti_password2.dart";
 part "ganti_password4.dart";
 part "ganti_password3.dart";
+part 'cobs.dart';
