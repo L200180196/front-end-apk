@@ -1,6 +1,6 @@
 part of "pages.dart";
 
-class GantiPassword2 extends StatelessWidget {
+class GantiPassword4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class GantiPassword2 extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8))),
                 child: Center(
                     child: Image(
-                  image: AssetImage("assets/Mail.png"),
+                  image: AssetImage("assets/check.png"),
                   height: MediaQuery.of(context).size.height * 0.09,
                   width: MediaQuery.of(context).size.height * 0.09,
                 )),
@@ -26,25 +26,16 @@ class GantiPassword2 extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 24),
                 child: Text(
-                  "Cek email kamu ",
-                  style: blackFontStyle3.copyWith(fontSize: 30),
-                ),
-              ),
-              Container(
-                margin:
-                    EdgeInsets.only(top: 24, right: 24, left: 24, bottom: 24),
-                child: Text(
-                  "Kami baru saja mengirimkan email untuk mengatur ulang kata sandi kamu ",
+                  "Kata sandi kamu sudah berhasil diganti ",
                   textAlign: TextAlign.center,
-                  style: blackFontStyle3.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.normal),
+                  style: blackFontStyle3.copyWith(fontSize: 22),
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width * 0.6,
+                margin: EdgeInsets.all(24),
                 child: RaisedButton(
                     onPressed: () {
-                      Get.to(GantiPassword3());
+                      Get.to(MainPage());
                     },
                     elevation: 0,
                     shape: RoundedRectangleBorder(
@@ -63,7 +54,7 @@ class GantiPassword2 extends StatelessWidget {
                         height: 40,
                         alignment: Alignment.center,
                         child: Text(
-                          'Buka Aplikasi Email',
+                          'Kembali ke profil',
                           style: blackFontStyle3.copyWith(
                               color: Colors.white,
                               fontSize: 16,

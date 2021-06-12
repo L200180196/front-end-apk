@@ -55,9 +55,7 @@ class GeneralPageAwal extends StatelessWidget {
                         SizedBox(
                           child: Container(
                             width: 25,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage("assets/plus.png"))),
+                            decoration: BoxDecoration(),
                           ),
                         )
                       ],
@@ -81,7 +79,9 @@ class GeneralPageAwal extends StatelessWidget {
                           ),
                           // Text("Belum memiliki akun ? "),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(SignUpPage());
+                              },
                               child: Text(
                                 teks2,
                                 // Text(

@@ -45,8 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
     double deviceHeight = MediaQuery.of(context).size.height;
-    bool isLoading = false;
-    var color2 = "828282".toColor();
+    // bool isLoading = false;
     return GeneralPageAwal(
       title: "Register",
       teks1: "Sudah Punya Akun ?",

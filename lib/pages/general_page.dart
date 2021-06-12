@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
 class GeneralPage extends StatelessWidget {
-  Color bg = "E5E5E5".toColor();
+  final Color bg = "E5E5E5".toColor();
   final String title;
   final Function onCloseButton;
   final Widget child;
