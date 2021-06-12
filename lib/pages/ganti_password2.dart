@@ -43,7 +43,9 @@ class GantiPassword2 extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(GantiPassword3());
+                    },
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),

@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:latihan1/cubit/user_cubit.dart';
-
-import 'package:latihan1/models/models.dart';
-
-import 'package:latihan1/widgets/lamaran_sukses.dart';
 import 'pages/pages.dart';
 
 void main() {
@@ -23,7 +19,7 @@ class MyApp extends StatelessWidget {
         home: SignInPage(),
         theme: ThemeData(
             textTheme: TextTheme(
-                title: TextStyle(
+                headline5: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.normal,
                     fontSize: 14))),

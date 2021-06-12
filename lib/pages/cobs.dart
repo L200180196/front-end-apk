@@ -50,8 +50,8 @@ class _CobsState extends State<Cobs> {
     );
   }
 
-  @override
   int selectedIndex = 0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(

@@ -21,7 +21,6 @@ class GenProfilePage extends StatefulWidget {
 }
 
 class _GenProfilePageState extends State<GenProfilePage> {
-  @override
   void _onButtonPressed() {
     showModalBottomSheet(
         shape: RoundedRectangleBorder(
@@ -34,6 +33,7 @@ class _GenProfilePageState extends State<GenProfilePage> {
         });
   }
 
+  @override
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
     double deviceHeight = MediaQuery.of(context).size.height;

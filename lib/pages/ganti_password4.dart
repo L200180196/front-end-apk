@@ -34,7 +34,9 @@ class GantiPassword4 extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(24),
                 child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(MainPage());
+                    },
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),

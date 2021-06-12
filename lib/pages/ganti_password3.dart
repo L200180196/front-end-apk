@@ -125,7 +125,9 @@ class _GantiPassword3State extends State<GantiPassword3> {
                     Container(
                       margin: EdgeInsets.only(top: 24),
                       child: RaisedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(GantiPassword4());
+                          },
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
