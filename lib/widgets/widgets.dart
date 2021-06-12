@@ -6,7 +6,6 @@ import 'package:latihan1/pages/pages.dart';
 import 'package:latihan1/widgets/lamaran.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:latihan1/models/models.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:latihan1/shared/shared.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';

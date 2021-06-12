@@ -118,8 +118,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
-<<<<<<< HEAD
-=======
   flutter_native_splash:
     dependency: "direct main"
     description:
@@ -127,18 +125,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.8+4"
->>>>>>> 9af8c21187975379383d8827c3fa6e1ba7b9f3de
   flutter_spinkit:
     dependency: "direct main"
     description:
       name: flutter_spinkit
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "4.1.2+1"
-=======
     version: "5.0.0"
->>>>>>> 9af8c21187975379383d8827c3fa6e1ba7b9f3de
   flutter_test:
     dependency: "direct dev"
     description: flutter
