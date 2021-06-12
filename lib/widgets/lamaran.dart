@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/widgets/lamaran_sukses.dart';
 import 'package:supercharged/supercharged.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Lamaran extends StatefulWidget {
   @override
@@ -16,6 +17,10 @@ void _openPopupBerhasil(context) {
 }
 
 class _LamaranState extends State<Lamaran> {
+  Color blueColors = "528FFF".toColor();
+  Color blueColors2 = "75A6FF".toColor();
+  TextStyle blackFontStyle3 = GoogleFonts.inter()
+      .copyWith(color: Colors.black, fontWeight: FontWeight.w700);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,7 +124,7 @@ class _LamaranState extends State<Lamaran> {
                       Container(
                         margin:
                             EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                        padding: EdgeInsets.only(bottom: 60),
+                        padding: EdgeInsets.only(bottom: 10),
                         child: Column(
                           children: [
                             Container(
@@ -148,65 +153,97 @@ class _LamaranState extends State<Lamaran> {
                     ],
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.only(right: 24, left: 24, bottom: 24),
+                  child: RaisedButton(
+                      onPressed: () {
+                        _openPopupBerhasil(context);
+                      },
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                      // color: blueColors,
+                      padding: EdgeInsets.all(0),
+                      child: Ink(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [blueColors2, blueColors],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Container(
+                          width: double.infinity,
+                          height: 40,
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Cari Pekerjaan',
+                            style: blackFontStyle3.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.normal),
+                          ),
+                        ),
+                      )),
+                ),
               ],
             ),
           ),
           ////Bottom
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 60,
-              padding: EdgeInsets.fromLTRB(24, 8, 24, 8),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16)),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 5,
-                    offset: Offset(
-                      2,
-                      2,
-                    ),
-                  ),
-                ],
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      _openPopupBerhasil(context);
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 40,
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      // padding:
-                      //     EdgeInsets.symmetric(vertical: 15, horizontal: 126),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: "75A6FF".toColor(),
-                      ),
-                      child: Text(
-                        "Kirim Lamaran",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.bottomCenter,
+          //   child: Container(
+          //     height: 60,
+          //     padding: EdgeInsets.fromLTRB(24, 8, 24, 8),
+          //     width: double.infinity,
+          //     decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.only(
+          //           topLeft: Radius.circular(16),
+          //           topRight: Radius.circular(16)),
+          //       color: Colors.white,
+          //       boxShadow: [
+          //         BoxShadow(
+          //           color: Colors.black.withOpacity(0.3),
+          //           blurRadius: 5,
+          //           offset: Offset(
+          //             2,
+          //             2,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //     child: Row(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       crossAxisAlignment: CrossAxisAlignment.center,
+          //       children: [
+          //         GestureDetector(
+          //           onTap: () {
+          //             _openPopupBerhasil(context);
+          //           },
+          //           child: Container(
+          //             alignment: Alignment.center,
+          //             height: 40,
+          //             width: MediaQuery.of(context).size.width * 0.8,
+          //             // padding:
+          //             //     EdgeInsets.symmetric(vertical: 15, horizontal: 126),
+          //             decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.circular(8),
+          //               color: "75A6FF".toColor(),
+          //             ),
+          //             child: Text(
+          //               "Kirim Lamaran",
+          //               style: TextStyle(
+          //                 fontSize: 14,
+          //                 color: Colors.white,
+          //                 fontWeight: FontWeight.bold,
+          //                 letterSpacing: 1,
+          //               ),
+          //             ),
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

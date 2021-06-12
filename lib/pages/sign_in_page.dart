@@ -276,9 +276,7 @@ class _SignInPageState extends State<SignInPage> {
                         margin: EdgeInsets.only(top: 16),
                         child: Container(
                           child: RaisedButton(
-                            onPressed: () {
-                              Get.to(SignUpPage());
-                            },
+                            onPressed: () {},
                             elevation: 0,
                             color: "E76257".toColor(),
                             shape: RoundedRectangleBorder(

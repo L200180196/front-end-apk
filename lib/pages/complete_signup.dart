@@ -13,7 +13,6 @@ class _CompleteSignUpState extends State<CompleteSignUp> {
   @override
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
-    bool isLoading = false;
     return GenProfilePage(
       title: "Lengkapi Profil Kamu",
       str: "aa",

@@ -11,14 +11,54 @@ class Rekomendasi extends StatefulWidget {
 
 class _RekomendasiState extends State<Rekomendasi> {
   String selected = '1';
+  int id;
+  String nama;
+  String gambar;
+  String posisi;
+  String gaji;
+  String alamat;
+  String pendidikan;
+  String jamkerja;
+  String deadline;
+  String syaratumum;
+  String syaratkhusus;
+  String fasilitas;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
         onTap: () {
-          setState(() {
-            selected == '1' ? selected = '2' : selected = '1';
-          });
+          id = widget.save.perusahaan.id;
+          nama = widget.save.perusahaan.nama;
+          gambar = widget.save.perusahaan.gambar;
+          posisi = widget.save.perusahaan.posisi;
+          gaji = widget.save.perusahaan.gaji;
+          alamat = widget.save.perusahaan.alamat;
+          pendidikan = widget.save.perusahaan.pendidikan;
+          jamkerja = widget.save.perusahaan.jamkerja;
+          deadline = widget.save.perusahaan.deadline;
+          syaratumum = widget.save.perusahaan.syaratumum;
+          syaratkhusus = widget.save.perusahaan.syaratkhusus;
+          fasilitas = widget.save.perusahaan.fasilitas;
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => Cobs(
+                      id: id,
+                      nama: nama,
+                      gambar: gambar,
+                      posisi: posisi,
+                      gaji: gaji,
+                      alamat: alamat,
+                      pendidikan: pendidikan,
+                      jamkerja: jamkerja,
+                      deadline: deadline,
+                      syaratkhusus: syaratkhusus,
+                      syaratumum: syaratumum,
+                      fasilitas: fasilitas)));
+          // setState(() {
+          //   selected == '1' ? selected = '2' : selected = '1';
+          // });
         },
         child: Container(
           margin: EdgeInsets.only(top: 8, right: 24),
