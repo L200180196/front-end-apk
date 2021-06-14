@@ -28,18 +28,18 @@ class _RekomendasiState extends State<Rekomendasi> {
     return Center(
       child: GestureDetector(
         onTap: () {
-          id = widget.save.perusahaan.id;
-          nama = widget.save.perusahaan.nama;
-          gambar = widget.save.perusahaan.gambar;
-          posisi = widget.save.perusahaan.posisi;
-          gaji = widget.save.perusahaan.gaji;
-          alamat = widget.save.perusahaan.alamat;
-          pendidikan = widget.save.perusahaan.pendidikan;
-          jamkerja = widget.save.perusahaan.jamkerja;
-          deadline = widget.save.perusahaan.deadline;
-          syaratumum = widget.save.perusahaan.syaratumum;
-          syaratkhusus = widget.save.perusahaan.syaratkhusus;
-          fasilitas = widget.save.perusahaan.fasilitas;
+          id = widget.save.id;
+          nama = widget.save.nama;
+          gambar = widget.save.gambar;
+          posisi = widget.save.posisi;
+          gaji = widget.save.gaji;
+          alamat = widget.save.alamat;
+          pendidikan = widget.save.pendidikan;
+          jamkerja = widget.save.jamkerja;
+          deadline = widget.save.deadline;
+          syaratumum = widget.save.syaratumum;
+          syaratkhusus = widget.save.syaratkhusus;
+          fasilitas = widget.save.fasilitas;
           Navigator.push(
               context,
               MaterialPageRoute(
